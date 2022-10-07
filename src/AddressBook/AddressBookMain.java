@@ -8,7 +8,7 @@ public class AddressBookMain {
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book...!");
         System.out.println("Existing data:");
-        addressBook.readingData();
+        AddressBookSystem.readingData();
         menu();
     }
     private static void menu() {
@@ -22,7 +22,7 @@ public class AddressBookMain {
 
             int choice = sc.nextInt();
             sc.nextLine();
-            addressBookManager addMan = new addressBookManager();
+            AddressBookManager addMan = new AddressBookManager();
             switch (choice) {
                 case 1:
                     addMan.createAddressBook();
@@ -45,7 +45,7 @@ public class AddressBookMain {
 
     public static void userInput() {
 
-        person newPerson = new person();
+        Person newPerson = new Person();
         scan.nextLine();
         System.out.println("Enter First Name: ");
         newPerson.setFirstName(scan.nextLine());
@@ -77,7 +77,7 @@ public class AddressBookMain {
                 continue ;
             }
         }
-        addressBook newEntry = new addressBook();
+        AddressBookSystem newEntry = new AddressBookSystem();
         newEntry.addPerson(newPerson);
     }
     public static void openUserIn() {
@@ -93,7 +93,7 @@ public class AddressBookMain {
             System.out.println("7. Display ");
             int option = sc.nextInt();
             sc.nextLine();
-            addressBook tempObj = new addressBook();
+            AddressBookSystem tempObj = new AddressBookSystem();
             switch (option) {
                 case 1:
                     userInput();
